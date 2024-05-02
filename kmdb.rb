@@ -113,8 +113,6 @@ actor=Actor.new
 actor["name"] = "Joseph Gordon-Levitt"
 actor.save
 
-
-
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
 # - You are welcome to use external resources for help with the assignment (including
