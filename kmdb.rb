@@ -113,6 +113,42 @@ actor=Actor.new
 actor["name"] = "Joseph Gordon-Levitt"
 actor.save
 
+batman_begins = Movie.find_by(title: "Batman Begins")
+the_dark_knight = Movie.find_by(title: "The Dark Knight")
+the_dark_knight_rises = Movie.find_by(title: "The Dark Knight Rises")
+
+
+tom_hardy = Actor.find_by(name: "Tom Hardy")
+joseph_gordon_levitt = Actor.find_by(name: "Joseph Gordon-Levitt")
+anne_hathaway = Actor.find_by(name: "Anne Hathaway")
+christian_bale = Actor.find_by(name: "Christian Bale")
+michael_caine = Actor.find_by(name: "Michael Caine")
+katie_holmes = Actor.find_by(name: "Katie Holmes")
+aaron_eckhart = Actor.find_by(name: "Aaron Eckhart")
+maggie_gyllenhaal = Actor.find_by(name: "Maggie Gyllenhaal")
+gary_oldman = Actor.find_by(name: "Gary Oldman")
+heath_ledger = Actor.find_by(name: "Heath Ledger")
+liam_neeson = Actor.find_by(name: "Liam Neeson")
+
+Role.create(movie_id: batman_begins.id, actor_id: christian_bale.id, chracter_name: "Bruce Wayne")
+Role.create(movie_id: batman_begins.id, actor_id: michael_caine.id, chracter_name: "Alfred")
+Role.create(movie_id: batman_begins.id, actor_id: liam_neeson.id, chracter_name: "Ra's Al Ghul")
+Role.create(movie_id: batman_begins.id, actor_id: katie_holmes.id, chracter_name: "Rachel Dawes")
+Role.create(movie_id: batman_begins.id, actor_id: gary_oldman.id, chracter_name: "Commissioner Gordon")
+
+Role.create(movie_id: the_dark_knight.id, actor_id: christian_bale.id, chracter_name: "Bruce Wayne")
+Role.create(movie_id: the_dark_knight.id, actor_id: heath_ledger.id, chracter_name: "Joker")
+Role.create(movie_id: the_dark_knight.id, actor_id: aaron_eckhart.id, chracter_name: "Harvey Dent")
+Role.create(movie_id: the_dark_knight.id, actor_id: michael_caine.id, chracter_name: "Alfred")
+Role.create(movie_id: the_dark_knight.id, actor_id: maggie_gyllenhaal.id, chracter_name: "Rachel Dawes")
+
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: christian_bale.id, chracter_name: "Bruce Wayne")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: gary_oldman.id, chracter_name: "Commissioner Gordon")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: tom_hardy.id, chracter_name: "Bane")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: joseph_gordon_levitt.id, chracter_name: "John Blake")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: anne_hathaway.id, chracter_name: "Selina Kyle")
+
+
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
 # - You are welcome to use external resources for help with the assignment (including
@@ -173,6 +209,10 @@ actor.save
 puts "Movies"
 puts "======"
 puts ""
+
+for movie in movie
+    studi
+
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
