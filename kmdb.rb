@@ -26,8 +26,8 @@
 #   Table and columns should match the domain model. Execute the migration
 #   files to create the tables in the database. (5 points)
 
-
-
+# Done, I've created 4 models (Studio, Movie, Actor and Role)
+# Ran command rails runner data.rb to see if the tables have all the required columns
 
 
 
@@ -36,6 +36,24 @@
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids.
 #   Delete any existing data beforehand so that each run of this script does not
 #   create duplicate data. (5 points)
+
+Movie.destroy_all
+
+movie_new = Movie.new
+movie_new ["title"] = "Batman Begins"
+movie_new["year_released"] = 2005
+movie_new["rated"] = "PG-13"
+#insert row for adding studio id
+movie_new.save
+
+Studio.destroy_all
+
+studio_new = Studio.new
+studio_new["name"] = "Warner Bros"
+studio_new.save
+
+
+
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
 # - You are welcome to use external resources for help with the assignment (including
