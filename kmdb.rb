@@ -42,11 +42,6 @@ Role.destroy_all
 
 #   create duplicate data. (5 points)
 
-Movie.destroy_all
-Studio.destroy_all
-Actor.destroy_all
-Role.destroy_all
-
 studio=Studio.new
 studio["Studio"] = "Warner Bros."
 studio.save
