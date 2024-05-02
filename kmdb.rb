@@ -35,22 +35,83 @@
 
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids.
 #   Delete any existing data beforehand so that each run of this script does not
+Movie.destroy_all
+Studio.destroy_all
+Actor.destroy_all
+Role.destroy_all
+
 #   create duplicate data. (5 points)
 
 Movie.destroy_all
+Studio.destroy_all
+Actor.destroy_all
+Role.destroy_all
+
+studio=Studio.new
+studio["Studio"] = "Warner Bros."
+studio.save
+
+warner_bros = Studio.find_by({"Studio" => "Warner Bros."})
 
 movie_new = Movie.new
 movie_new ["title"] = "Batman Begins"
 movie_new["year_released"] = 2005
 movie_new["rated"] = "PG-13"
-#insert row for adding studio id
+movie_new["studio_id"] = warner_bros.id
 movie_new.save
 
-Studio.destroy_all
+movie_new = Movie.new
+movie_new ["title"] = "The Dark Knight"
+movie_new["year_released"] = 2008
+movie_new["rated"] = "PG-13"
+movie_new["studio_id"] = warner_bros.id
+movie_new.save
 
-studio_new = Studio.new
-studio_new["name"] = "Warner Bros"
-studio_new.save
+movie_new = Movie.new
+movie_new ["title"] = "The Dark Knight Rises"
+movie_new["year_released"] = 2012
+movie_new["rated"] = "PG-13"
+movie_new["studio_id"] = warner_bros.id
+movie_new.save
+
+Actor.destroy_all
+
+actor=Actor.new
+actor["name"] = "Christian Bale"
+actor.save
+actor=Actor.new
+actor["name"] = "Michael Caine"
+actor.save
+actor=Actor.new
+actor["name"] = "Liam Neeson"
+actor.save
+actor=Actor.new
+actor["name"] = "Michael Caine"
+actor.save
+actor=Actor.new
+actor["name"] = "Katie Holmes"
+actor.save
+actor=Actor.new
+actor["name"] = "Gary Oldman"
+actor.save
+actor=Actor.new
+actor["name"] = "Aaron Eckhart"
+actor.save
+actor=Actor.new
+actor["name"] = "Maggie Gyllenhaal"
+actor.save
+actor=Actor.new
+actor["name"] = "Heath Ledger"
+actor.save
+actor=Actor.new
+actor["name"] = "Tom Hardy"
+actor.save
+actor=Actor.new
+actor["name"] = "Anne Hathaway"
+actor.save
+actor=Actor.new
+actor["name"] = "Joseph Gordon-Levitt"
+actor.save
 
 
 
