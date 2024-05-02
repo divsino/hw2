@@ -210,8 +210,10 @@ puts "Movies"
 puts "======"
 puts ""
 
-for movie in movie
-    studi
+for mo in movie
+    studio = Studio.find_by(id: mo.studio_id)
+    puts "#{mo.title} #{mo.year_released} #{mo.rated} #{studio["name"]}"
+end
 
 
 # Query the movies data and loop through the results to display the movies output.
