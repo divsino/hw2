@@ -209,7 +209,7 @@ movies = Movie.all
 
 for mo in movies
     studio = Studio.find_by(id: mo.studio_id)
-    puts "#{mo.title} #{mo.year_released} #{mo.rated} #{studio["name"]}"
+    puts "#{mo.title} #{mo.year_released} #{mo.rated} #{studio["Studio"]}"
 end
 
 
