@@ -125,23 +125,23 @@ gary_oldman = Actor.find_by(name: "Gary Oldman")
 heath_ledger = Actor.find_by(name: "Heath Ledger")
 liam_neeson = Actor.find_by(name: "Liam Neeson")
 
-Role.create(movie_id: batman_begins.id, actor_id: christian_bale.id, chracter_name: "Bruce Wayne")
-Role.create(movie_id: batman_begins.id, actor_id: michael_caine.id, chracter_name: "Alfred")
-Role.create(movie_id: batman_begins.id, actor_id: liam_neeson.id, chracter_name: "Ra's Al Ghul")
-Role.create(movie_id: batman_begins.id, actor_id: katie_holmes.id, chracter_name: "Rachel Dawes")
-Role.create(movie_id: batman_begins.id, actor_id: gary_oldman.id, chracter_name: "Commissioner Gordon")
+Role.create(movie_id: batman_begins.id, actor_id: christian_bale.id, character_name: "Bruce Wayne")
+Role.create(movie_id: batman_begins.id, actor_id: michael_caine.id, character_name: "Alfred")
+Role.create(movie_id: batman_begins.id, actor_id: liam_neeson.id, character_name: "Ra's Al Ghul")
+Role.create(movie_id: batman_begins.id, actor_id: katie_holmes.id, character_name: "Rachel Dawes")
+Role.create(movie_id: batman_begins.id, actor_id: gary_oldman.id, character_name: "Commissioner Gordon")
 
-Role.create(movie_id: the_dark_knight.id, actor_id: christian_bale.id, chracter_name: "Bruce Wayne")
-Role.create(movie_id: the_dark_knight.id, actor_id: heath_ledger.id, chracter_name: "Joker")
-Role.create(movie_id: the_dark_knight.id, actor_id: aaron_eckhart.id, chracter_name: "Harvey Dent")
-Role.create(movie_id: the_dark_knight.id, actor_id: michael_caine.id, chracter_name: "Alfred")
-Role.create(movie_id: the_dark_knight.id, actor_id: maggie_gyllenhaal.id, chracter_name: "Rachel Dawes")
+Role.create(movie_id: the_dark_knight.id, actor_id: christian_bale.id, character_name: "Bruce Wayne")
+Role.create(movie_id: the_dark_knight.id, actor_id: heath_ledger.id, character_name: "Joker")
+Role.create(movie_id: the_dark_knight.id, actor_id: aaron_eckhart.id, character_name: "Harvey Dent")
+Role.create(movie_id: the_dark_knight.id, actor_id: michael_caine.id, character_name: "Alfred")
+Role.create(movie_id: the_dark_knight.id, actor_id: maggie_gyllenhaal.id, character_name: "Rachel Dawes")
 
-Role.create(movie_id: the_dark_knight_rises.id, actor_id: christian_bale.id, chracter_name: "Bruce Wayne")
-Role.create(movie_id: the_dark_knight_rises.id, actor_id: gary_oldman.id, chracter_name: "Commissioner Gordon")
-Role.create(movie_id: the_dark_knight_rises.id, actor_id: tom_hardy.id, chracter_name: "Bane")
-Role.create(movie_id: the_dark_knight_rises.id, actor_id: joseph_gordon_levitt.id, chracter_name: "John Blake")
-Role.create(movie_id: the_dark_knight_rises.id, actor_id: anne_hathaway.id, chracter_name: "Selina Kyle")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: christian_bale.id, character_name: "Bruce Wayne")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: gary_oldman.id, character_name: "Commissioner Gordon")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: tom_hardy.id, character_name: "Bane")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: joseph_gordon_levitt.id, character_name: "John Blake")
+Role.create(movie_id: the_dark_knight_rises.id, actor_id: anne_hathaway.id, character_name: "Selina Kyle")
 
 
 # - Query the data and loop through the results to display output similar to the
@@ -227,7 +227,7 @@ roles = Role.all
 for ro in roles
     movies = Movie.find_by(id: ro.movie_id)
     actors = Actor.find_by(id: ro.actor_id)
-    puts "#{movies.title}  #{actors.name}  #{ro.chracter_name}" 
+    puts "#{movies.title}  #{actors.name}  #{ro.character_name}" 
 end
 
 # Query the cast data and loop through the results to display the cast output for each movie.
